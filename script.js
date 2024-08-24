@@ -5,6 +5,9 @@ const btnTry = document.querySelector("#btnTry")
 const btnReset = document.querySelector("#btnReset")
 const span = document.querySelector('span')
 let randomNumber = Math.round(Math.random() * 10)   
+console.log(randomNumber)
+let defeat = document.querySelector("#myAudio"); 
+let winner = document.querySelector("#myAudio2"); 
 
 
 let xAttempts = 1;
@@ -20,6 +23,7 @@ function handleTryClick(event) {
         screen1.classList.add('hide')
         screen2.classList.remove('hide')
         document.querySelector('.screen2 h2').innerText = `Parabéns você acertou em ${xAttempts} tentativas`
+        winner.play()
     }
     if(totalAttempts == 2) {
         span.innerText = `Nao desista, você possui ${totalAttempts} tentativas, let's GO`
@@ -33,6 +37,7 @@ function handleTryClick(event) {
         screen1.classList.add('hide')
         screen2.classList.remove('hide')
         document.querySelector('h2').innerText = `Ruim, sua tentativas acabaram`
+        defeat.play()
     }
 
     inputNumber.value = ""
@@ -51,6 +56,8 @@ function handleResetClick() {
     span.style.color = '#027202'
 
     randomNumber = Math.round(Math.random() * 10)
+    defeat.pause()
+    winner.pause()
 }
 
 // eventos
