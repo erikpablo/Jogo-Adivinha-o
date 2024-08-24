@@ -47,7 +47,6 @@ main {
     padding: 4.8rem 6.4rem 6.4rem;
     
     width: min(42.8rem, 90%);
-    margin-bottom: -20rem;
     text-align: center;
 }
 
@@ -64,6 +63,13 @@ h1, p {
 }
 
 p {
+    opacity: .8;
+    margin-bottom: .4rem;
+}
+
+span {
+    color: green;
+    font-weight: bold;
     opacity: .8;
 }
 
