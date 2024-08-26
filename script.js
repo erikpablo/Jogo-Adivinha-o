@@ -5,7 +5,6 @@ const btnTry = document.querySelector("#btnTry")
 const btnReset = document.querySelector("#btnReset")
 const span = document.querySelector('span')
 let randomNumber = Math.round(Math.random() * 10)   
-console.log(randomNumber)
 let dunbAudio = document.querySelector("#myAudio"); 
 let winnerAudio = document.querySelector("#myAudio2"); 
 
